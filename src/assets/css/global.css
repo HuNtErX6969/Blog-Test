@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+.logo-title {
+  color: #8fe1a2;
+  font-weight: 700;
+  font-size: 24px;
+}
+.logo-image {
+  width: 60px;
+  height: 50px;
+}
+.nav-item {
+  padding: 1rem;
+}
+button:focus{
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.signup {
+  margin-left: 1rem;
+  color: #fefefe;
+  background-color: #63b476;
+}
+.signup:hover {
+  color: #fefefe;
+}
+.section-title {
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+.section-title > p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.section-title > p::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #63b476;
+  width: 20%;
+  position: relative;
+  bottom: -3px; 
+  z-index: -1;
+}
+.next-section {
+  margin-top: 5%;
+}
+@media screen and (max-width: 550px) {
+  .section-title {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navbar-toggler {
+    border: none;
+    height: 34px;
+    width: 44px;
+    font-weight: 500;
+    padding: 0;
+    font-size: 22px;
+    color: #00ffff;
+    border: none;
+    outline: none !important;
+    margin-right: 1rem;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler > .fa:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    transform: translateX(0%);
+    animation: slideLeft 2s 1;
+  }
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .navbar-nav {
+    background-color: #fefefe;
+    position: fixed;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    animation: none;
+  }
+  .navbar .nav-item .nav-link::before {
+    display: none;
+  }
+  .navbar .nav-item .nav-link.active {
+    background-color: #63b476;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0 50px 50px 0;
+  }
+  .navbar .nav-item {
+    transform: translateX(0%);
+    cursor: pointer;
+  }
+  .navbar .nav-item:nth-child(odd) {
+    animation: slideRight 1s 1;
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  .navbar .nav-item:nth-child(even) {
+    animation: slideLeft 1s 1;
+  }
+}
